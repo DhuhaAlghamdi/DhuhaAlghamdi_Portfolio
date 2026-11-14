@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dhuha Ali - IT Student & Aspiring Software Engineer</title>
+    <title>Dhuha Portfolio - IT Student </title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Sora:wght@300;400;600;700&display=swap" rel="stylesheet">
@@ -12,13 +12,13 @@
             --bg-primary: #0a0e17;
             --bg-secondary: #111827;
             --bg-card: #1a1f35;
-            --accent-primary: #00d4ff;
-            --accent-secondary: #7c3aed;
+            --accent-primary: #f4b6ce;
+            --accent-secondary: #ed99bd;
             --text-primary: #e5e7eb;
             --text-secondary: #9ca3af;
-            --text-muted: #6b7280;
+            --text-muted: #a3a8b8;
             --border-color: #2d3748;
-            --glow-color: rgba(0, 212, 255, 0.15);
+            --glow-color: rgba(244, 182, 206, 0.15);
         }
 
         * {
@@ -42,9 +42,9 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-image: 
-                linear-gradient(rgba(0, 212, 255, 0.03) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(0, 212, 255, 0.03) 1px, transparent 1px);
+            background-image:
+                linear-gradient(rgba(244, 182, 206, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(244, 182, 206, 0.03) 1px, transparent 1px);
             background-size: 50px 50px;
             z-index: 0;
             pointer-events: none;
@@ -136,7 +136,7 @@
         .hero-tag {
             display: inline-block;
             padding: 0.5rem 1rem;
-            background: rgba(0, 212, 255, 0.1);
+            background: rgba(244, 182, 206, 0.1);
             border: 1px solid var(--accent-primary);
             border-radius: 50px;
             color: var(--accent-primary);
@@ -188,7 +188,7 @@
         .section-tag {
             display: inline-block;
             padding: 0.4rem 1rem;
-            background: rgba(124, 58, 237, 0.1);
+            background: rgba(237, 153, 189, 0.1);
             border: 1px solid var(--accent-secondary);
             border-radius: 50px;
             color: var(--accent-secondary);
@@ -325,7 +325,7 @@
         .project-icon {
             width: 50px;
             height: 50px;
-            background: rgba(0, 212, 255, 0.1);
+            background: rgba(244, 182, 206, 0.1);
             border-radius: 12px;
             display: flex;
             align-items: center;
@@ -375,13 +375,55 @@
         }
 
         /* Project Link Button */
+        .hero .project-link {
+            margin-top: 0;
+        }
+
+        .project-link:focus-visible {
+            outline: 2px solid var(--accent-primary);
+            outline-offset: 4px;
+        }
+
+        .project-screenshot {
+            display: block;
+            width: 100%;
+            height: auto;
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            margin-bottom: 1.5rem;
+        }
+
+        .project-status {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            margin-bottom: 1rem;
+            border: 1px solid var(--accent-primary);
+            border-radius: 50px;
+            color: var(--accent-primary);
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.8rem;
+        }
+
+        .project-technologies, .project-credit {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            margin-top: 1rem;
+            overflow-wrap: anywhere;
+        }
+
+        .project-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0 1rem;
+        }
+
         .project-link {
             display: inline-flex;
             align-items: center;
             gap: 0.5rem;
             padding: 0.75rem 1.5rem;
             margin-top: 1.5rem;
-            background: rgba(0, 212, 255, 0.1);
+            background: rgba(244, 182, 206, 0.1);
             border: 1px solid var(--accent-primary);
             border-radius: 8px;
             color: var(--accent-primary);
@@ -395,7 +437,7 @@
             background: var(--accent-primary);
             color: var(--bg-primary);
             transform: translateX(5px);
-            box-shadow: 0 5px 20px rgba(0, 212, 255, 0.3);
+            box-shadow: 0 5px 20px rgba(244, 182, 206, 0.3);
         }
 
         .project-link svg {
@@ -429,16 +471,16 @@
         }
 
         .linkedin-btn {
-            background: rgba(0, 119, 181, 0.1);
-            border-color: #0077b5;
-            color: #0077b5;
+            background: rgba(244, 182, 206, 0.1);
+            border-color: var(--accent-primary);
+            color: var(--accent-primary);
         }
 
         .linkedin-btn:hover {
-            background: #0077b5;
+            background: var(--accent-primary);
             color: white;
             transform: translateY(-3px);
-            box-shadow: 0 10px 30px rgba(0, 119, 181, 0.3);
+            box-shadow: 0 10px 30px rgba(244, 182, 206, 0.3);
         }
 
         .github-btn {
@@ -506,6 +548,76 @@
             }
         }
 
+        /* Animated section artwork and navy / soft pink palette */
+        .hero-layout, .section-layout {
+            display: grid;
+            grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+            align-items: center;
+            gap: clamp(2rem, 5vw, 4rem);
+            width: 100%;
+        }
+
+        .hero-layout > *, .section-layout > * { min-width: 0; }
+
+        .section-gif {
+            display: block;
+            width: 100%;
+            max-width: 340px;
+            height: auto;
+            object-fit: contain;
+            justify-self: center;
+            background: transparent;
+        }
+
+        .hero-gif { max-width: 400px; }
+        .about-layout .section-gif { max-width: 240px; }
+        .hero-layout h1 { font-size: clamp(2rem, 3.8vw, 3.5rem); }
+        .about-layout .about-content { padding: 2rem; }
+        .about-layout { grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr); }
+        .about-layout .about-content { order: -1; }
+        .skills-layout { grid-template-columns: minmax(0, 0.6fr) minmax(0, 1.4fr); }
+        .skills-layout .skills-grid { width: 100%; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+        .skill-category { padding: 1.5rem; }
+        .contact-content .section-header { text-align: left; margin-bottom: 2rem; }
+        .contact-content .section-description { margin: 0; }
+        .contact-content .contact-buttons { justify-content: flex-start; }
+        .contact-details { display: grid; gap: 0.75rem; margin-bottom: 2rem; font-style: normal; }
+        .contact-details a { color: var(--accent-primary); text-decoration: none; overflow-wrap: anywhere; }
+        .contact-details a:hover { text-decoration: underline; color: var(--accent-secondary); }
+        .contact-details span { color: var(--text-secondary); margin-right: 0.5rem; }
+        .social-btn { color: var(--accent-primary); border-color: var(--accent-primary); background: rgba(244, 182, 206, 0.1); }
+        .social-btn:hover { color: var(--bg-primary); background: var(--accent-primary); border-color: var(--accent-primary); box-shadow: 0 10px 30px var(--glow-color); }
+        .linkedin-btn:hover { color: var(--bg-primary); }
+        a:focus-visible { outline: 2px solid var(--accent-primary); outline-offset: 5px; }
+        .nav-links a:focus-visible { color: var(--accent-primary); }
+        section { scroll-margin-top: 110px; }
+
+        @media (max-width: 900px) {
+            .skills-layout .skills-grid { grid-template-columns: 1fr; }
+        }
+
+        @media (max-width: 768px) {
+            .hero-layout, .section-layout { grid-template-columns: minmax(0, 1fr); gap: 2rem; }
+            .section-gif { max-width: 240px; }
+            .hero-gif { max-width: 280px; }
+            .about-layout .section-gif { max-width: 160px; }
+            .skills-layout .skills-grid { order: -1; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+            .hero-content { max-width: none; }
+            .contact-content .section-header { text-align: center; }
+            .contact-content .section-description { margin: 0 auto; }
+            .contact-content .contact-buttons { justify-content: center; }
+            .contact-details { text-align: center; }
+            nav { padding: 1rem 0; }
+            .nav-links { flex-direction: row; flex-wrap: wrap; gap: 0.5rem 1rem; justify-content: flex-end; }
+            nav .container { gap: 1rem; }
+            .nav-links a { font-size: 0.8rem; }
+        }
+
+        @media (max-width: 540px) {
+            .skills-layout .skills-grid { grid-template-columns: 1fr; }
+            .social-btn { padding: 0.85rem 1rem; font-size: 0.9rem; }
+        }
+
         /* Responsive Design */
         @media (max-width: 768px) {
             h1 {
@@ -547,8 +659,8 @@
             }
 
             .nav-links {
-                flex-direction: column;
-                gap: 1rem;
+                flex-direction: row;
+                gap: 0.5rem 1rem;
             }
 
             .hero {
@@ -576,14 +688,21 @@
 
     <!-- Hero Section -->
     <section id="home" class="hero">
-        <div class="container">
+        <div class="container hero-layout">
+            <img class="section-gif hero-gif" src="assets/projects/landing.gif" alt="" decoding="async">
             <div class="hero-content">
-                <span class="hero-tag">👩🏻‍💻 AVAILABLE FOR OPPORTUNITIES</span>
-                <h1>Hi, I'm <span class="gradient-text">Dhuha Ali</span></h1>
-                <p class="hero-subtitle">Information Technology Student | Aspiring Software Engineer</p>
+                <span class="hero-tag">AVAILABLE FOR OPPORTUNITIES 👩🏻‍💻 </span>
+                <h1>Hi, I'm <span class="gradient-text">Dhuha Alghamdi</span></h1>
+                <p class="hero-subtitle">Information Technology Student | Aspiring Software Engineer and Ai</p>
                 <p class="hero-description">
                     I am passionate about Artificial Intelligence, system development, and building smart solutions that solve real-world problems. I enjoy transforming ideas into functional systems and continuously improving my technical skills.
                 </p>
+                <a href="assets/projects/Dhuha_Alghamdi_Resume.pdf" download="Dhuha_Alghamdi_Resume.pdf" class="project-link">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                        <path d="M12 3v12m-5-5 5 5 5-5M5 16v5h14v-5"/>
+                    </svg>
+                    <span>Download CV</span>
+                </a>
             </div>
         </div>
     </section>
@@ -595,7 +714,9 @@
                 <span class="section-tag">WHO I AM</span>
                 <h2>About Me</h2>
             </div>
-            <div class="about-content">
+            <div class="section-layout about-layout">
+                <img class="section-gif" src="assets/projects/reveal.gif" alt="" loading="lazy" decoding="async">
+                <div class="about-content">
                 <p>
                     I am a dedicated Information Technology student with a strong interest in Artificial Intelligence and system development. I enjoy solving complex problems and building structured, efficient systems.
                 </p>
@@ -605,6 +726,7 @@
                 <p>
                     My goal is to become a skilled software engineer who builds impactful and intelligent solutions.
                 </p>
+            </div>
             </div>
         </div>
     </section>
@@ -616,7 +738,9 @@
                 <span class="section-tag">TECHNICAL EXPERTISE</span>
                 <h2>Skills</h2>
             </div>
-            <div class="skills-grid">
+            <div class="section-layout skills-layout">
+                <img class="section-gif" src="assets/projects/taptap.gif" alt="" loading="lazy" decoding="async">
+                <div class="skills-grid">
                 <div class="skill-category">
                     <h3>Programming Languages</h3>
                     <ul>
@@ -624,6 +748,7 @@
                         <li>Python</li>
                         <li>SQL</li>
                         <li>HTML & CSS</li>
+                        <li>Java Script</li>
                     </ul>
                 </div>
                 <div class="skill-category">
@@ -637,6 +762,7 @@
                         <li>Design Patterns</li>
                     </ul>
                 </div>
+            </div>
             </div>
         </div>
     </section>
@@ -669,30 +795,6 @@
                         <li>Clean OOP implementation</li>
                     </ul>
                     <a href="https://github.com/DhuhaAlghamdi/Cpit455_Project_FinanceApp" target="_blank" class="project-link">
-                        <span>View on GitHub</span>
-                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                            <path d="M8 0C3.58 0 0 3.58 0 8C0 11.54 2.29 14.53 5.47 15.59C5.87 15.66 6.02 15.42 6.02 15.21C6.02 15.02 6.01 14.39 6.01 13.72C4 14.09 3.48 13.23 3.32 12.78C3.23 12.55 2.84 11.84 2.5 11.65C2.22 11.5 1.82 11.13 2.49 11.12C3.12 11.11 3.57 11.7 3.72 11.94C4.44 13.15 5.59 12.81 6.05 12.6C6.12 12.08 6.33 11.73 6.56 11.53C4.78 11.33 2.92 10.64 2.92 7.58C2.92 6.71 3.23 5.99 3.74 5.43C3.66 5.23 3.38 4.41 3.82 3.31C3.82 3.31 4.49 3.1 6.02 4.13C6.66 3.95 7.34 3.86 8.02 3.86C8.7 3.86 9.38 3.95 10.02 4.13C11.55 3.09 12.22 3.31 12.22 3.31C12.66 4.41 12.38 5.23 12.3 5.43C12.81 5.99 13.12 6.7 13.12 7.58C13.12 10.65 11.25 11.33 9.47 11.53C9.76 11.78 10.01 12.26 10.01 13.01C10.01 14.08 10 14.94 10 15.21C10 15.42 10.15 15.67 10.55 15.59C13.71 14.53 16 11.53 16 8C16 3.58 12.42 0 8 0Z" fill="currentColor"/>
-                        </svg>
-                    </a>
-                </div>
-
-                <!-- Al Ula Travel Planner -->
-                <div class="project-card">
-                    <div class="project-icon">🏜️</div>
-                    <h3>Al Ula Travel Planner</h3>
-                    <p class="project-subtitle">React-Based Smart Tourism Application</p>
-                    <p class="project-description">
-                        A comprehensive travel planning web application for Al Ula, Saudi Arabia, enabling users worldwide to plan complete trips including weather forecasts, attractions, events, and estimated costs. Final project for CPIT 405.
-                    </p>
-                    <ul class="project-features">
-                        <li>User Authentication system</li>
-                        <li>Protected Routes with React Router</li>
-                        <li>Weather integration (OpenWeatherMap API)</li>
-                        <li>Attractions discovery (OpenTripMap API)</li>
-                        <li>Simulated booking with localStorage</li>
-                        <li>Flight and hotel cost estimation</li>
-                    </ul>
-                    <a href="https://github.com/DhuhaAlghamdi/Cpit405_Project" target="_blank" class="project-link">
                         <span>View on GitHub</span>
                         <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
                             <path d="M8 0C3.58 0 0 3.58 0 8C0 11.54 2.29 14.53 5.47 15.59C5.87 15.66 6.02 15.42 6.02 15.21C6.02 15.02 6.01 14.39 6.01 13.72C4 14.09 3.48 13.23 3.32 12.78C3.23 12.55 2.84 11.84 2.5 11.65C2.22 11.5 1.82 11.13 2.49 11.12C3.12 11.11 3.57 11.7 3.72 11.94C4.44 13.15 5.59 12.81 6.05 12.6C6.12 12.08 6.33 11.73 6.56 11.53C4.78 11.33 2.92 10.64 2.92 7.58C2.92 6.71 3.23 5.99 3.74 5.43C3.66 5.23 3.38 4.41 3.82 3.31C3.82 3.31 4.49 3.1 6.02 4.13C6.66 3.95 7.34 3.86 8.02 3.86C8.7 3.86 9.38 3.95 10.02 4.13C11.55 3.09 12.22 3.31 12.22 3.31C12.66 4.41 12.38 5.23 12.3 5.43C12.81 5.99 13.12 6.7 13.12 7.58C13.12 10.65 11.25 11.33 9.47 11.53C9.76 11.78 10.01 12.26 10.01 13.01C10.01 14.08 10 14.94 10 15.21C10 15.42 10.15 15.67 10.55 15.59C13.71 14.53 16 11.53 16 8C16 3.58 12.42 0 8 0Z" fill="currentColor"/>
@@ -791,35 +893,11 @@
                     </a>
                 </div>
 
-                <!-- CPIT 405 Portfolio -->
-                <div class="project-card">
-                    <div class="project-icon">📚</div>
-                    <h3>CPIT 405 Course Portfolio</h3>
-                    <p class="project-subtitle">Web Development Labs & Assignments Collection</p>
-                    <p class="project-description">
-                        A comprehensive portfolio website showcasing all coursework from CPIT 405 (Web/Internet Applications). Features 11 labs and 3 assignments covering HTML, CSS, JavaScript, APIs, and React development.
-                    </p>
-                    <ul class="project-features">
-                        <li>11 interactive labs</li>
-                        <li>3 major assignments</li>
-                        <li>API integration projects</li>
-                        <li>React applications</li>
-                        <li>Responsive design</li>
-                        <li>GitHub Pages deployment</li>
-                    </ul>
-                    <a href="https://dhuhaalghamdi.github.io/Cpit405_Labs/" target="_blank" class="project-link">
-                        <span>View Live Portfolio</span>
-                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                            <path d="M3 1C1.89543 1 1 1.89543 1 3V13C1 14.1046 1.89543 15 3 15H13C14.1046 15 15 14.1046 15 13V8.5C15 8.22386 14.7761 8 14.5 8C14.2239 8 14 8.22386 14 8.5V13C14 13.5523 13.5523 14 13 14H3C2.44772 14 2 13.5523 2 13V3C2 2.44772 2.44772 2 3 2H7.5C7.77614 2 8 1.77614 8 1.5C8 1.22386 7.77614 1 7.5 1H3ZM10.5 1C10.2239 1 10 1.22386 10 1.5C10 1.77614 10.2239 2 10.5 2H13.2929L6.14645 9.14645C5.95118 9.34171 5.95118 9.65829 6.14645 9.85355C6.34171 10.0488 6.65829 10.0488 6.85355 9.85355L14 2.70711V5.5C14 5.77614 14.2239 6 14.5 6C14.7761 6 15 5.77614 15 5.5V1.5C15 1.22386 14.7761 1 14.5 1H10.5Z" fill="currentColor"/>
-                        </svg>
-                    </a>
-                </div>
-
                 <!-- Eid Cards Generator -->
                 <div class="project-card">
                     <div class="project-icon">🎴</div>
                     <h3>Eid Cards Generator</h3>
-                    <p class="project-subtitle">Interactive Web Application for MLSAC</p>
+                    <p class="project-subtitle">Interactive Web Application for MLSAC Eid Cards</p>
                     <p class="project-description">
                         A custom Eid greeting card generator developed for the Microsoft Learn Student Ambassadors Club at KAU. Features dual-card system with Arabic text rendering and cross-platform compatibility.
                     </p>
@@ -836,6 +914,87 @@
                             <path d="M3 1C1.89543 1 1 1.89543 1 3V13C1 14.1046 1.89543 15 3 15H13C14.1046 15 15 14.1046 15 13V8.5C15 8.22386 14.7761 8 14.5 8C14.2239 8 14 8.22386 14 8.5V13C14 13.5523 13.5523 14 13 14H3C2.44772 14 2 13.5523 2 13V3C2 2.44772 2.44772 2 3 2H7.5C7.77614 2 8 1.77614 8 1.5C8 1.22386 7.77614 1 7.5 1H3ZM10.5 1C10.2239 1 10 1.22386 10 1.5C10 1.77614 10.2239 2 10.5 2H13.2929L6.14645 9.14645C5.95118 9.34171 5.95118 9.65829 6.14645 9.85355C6.34171 10.0488 6.65829 10.0488 6.85355 9.85355L14 2.70711V5.5C14 5.77614 14.2239 6 14.5 6C14.7761 6 15 5.77614 15 5.5V1.5C15 1.22386 14.7761 1 14.5 1H10.5Z" fill="currentColor"/>
                         </svg>
                     </a>
+                </div>
+
+                <!-- AlUla Trip -->
+                <div class="project-card">
+                    <img class="project-screenshot" src="assets/projects/alula-trip.png" alt="AlUla Trip homepage with destination photography and Explore, Weather, and Map navigation" width="1280" height="800" loading="lazy" decoding="async">
+                    <h3>AlUla Trip</h3>
+                    <p class="project-subtitle">CPIT 405 Internet Applications</p>
+                    <p class="project-description">
+                        A travel planning website for exploring AlUla's historic sites, natural landmarks, and events. Visitors can browse destinations, view a map, check weather forecasts, and try a trip booking prototype.
+                    </p>
+                    <ul class="project-features">
+                        <li>Destination category filters</li>
+                        <li>Interactive destination map</li>
+                        <li>Weather and five-day forecasts</li>
+                        <li>Bookings saved in the browser</li>
+                    </ul>
+                    <p class="project-technologies"><strong>Technologies:</strong> React, JavaScript, CSS, React Router, Vite, OpenWeatherMap API, localStorage</p>
+                    <div class="project-links">
+                        <a href="https://dhuhaalghamdi.github.io/Cpit405_Project/" target="_blank" rel="noopener noreferrer" class="project-link">View Live Demo <span aria-hidden="true">&#8599;</span></a>
+                        <a href="https://github.com/DhuhaAlghamdi/Cpit405_Project" target="_blank" rel="noopener noreferrer" class="project-link">View on GitHub <span aria-hidden="true">&#8599;</span></a>
+                    </div>
+                </div>
+
+                <!-- Bug Breaker -->
+                <div class="project-card">
+                    <img class="project-screenshot" src="assets/projects/bug-breaker.png" alt="Bug Breaker arcade start screen with player name entry and Top Scores button" width="1280" height="800" loading="lazy" decoding="async">
+                    <h3>Bug Breaker</h3>
+                    <p class="project-subtitle">Microsoft LSAC Club &#183; LSAC Arcade</p>
+                    <span class="project-status">In progress</span>
+                    <p class="project-description">
+                        A browser arcade game where players move a paddle to bounce a ball, smash programming-themed bricks, and squash bugs. The current build adds faster levels, combo scoring, and wide-paddle power-ups to classic Breakout gameplay.
+                    </p>
+                    <ul class="project-features">
+                        <li>Mouse and keyboard controls</li>
+                        <li>Three lives and increasing speed</li>
+                        <li>Sound and particle effects</li>
+                        <li>Local leaderboard preview</li>
+                    </ul>
+                    <p class="project-technologies"><strong>Technologies:</strong> HTML, CSS, JavaScript, Canvas 2D, Web Audio API, localStorage</p>
+                    <p class="project-credit"><strong>My contributions:</strong> Game features, sounds, leaderboard interface, and mobile Safari navigation fixes. Built on MDN's open-source Breakout tutorial; global scores are still in development.</p>
+                    <div class="project-links">
+                        <a href="https://nelmkt.github.io/lsac-brick-breaker/" target="_blank" rel="noopener noreferrer" class="project-link">View Live Demo <span aria-hidden="true">&#8599;</span></a>
+                        <a href="https://github.com/nelmkt/lsac-brick-breaker" target="_blank" rel="noopener noreferrer" class="project-link">View on GitHub <span aria-hidden="true">&#8599;</span></a>
+                    </div>
+                </div>
+
+                <!-- Adrej -->
+                <div class="project-card">
+                    <div class="project-icon" aria-hidden="true">&#128202;</div>
+                    <h3>Adrej: An AI-Powered IPO Readiness Evaluation System</h3>
+                    <p class="project-subtitle">Graduation Project &#183; IPO Readiness AI System</p>
+                    <span class="project-status">In Development</span>
+                    <p class="project-description">
+                        A web system being developed to help Saudi companies assess IPO readiness against applicable CMA requirements. The planned workflow collects readiness answers and documents, checks for missing information, and generates a readiness assessment and gap report.
+                    </p>
+                    <ul class="project-features">
+                        <li>Frontend and backend implemented</li>
+                        <li>Working AI model under refinement</li>
+                        <li>Planned missing-information checks</li>
+                        <li>Planned readiness and gap reports</li>
+                    </ul>
+                    <p class="project-technologies"><strong>Documented stack:</strong> React, Python, FastAPI, OpenAI API, SQLite</p>
+                    <p class="project-credit"><strong>My contributions:</strong> Defined the project scope, wrote the aim and objectives, and identified key stakeholders and their roles. Our team has implemented the frontend and backend and is refining the working AI model.</p>
+                </div>
+
+                <!-- Program Review Dashboard -->
+                <div class="project-card">
+                    <div class="project-icon" aria-hidden="true">&#128187;</div>
+                    <h3>Program Review Dashboard</h3>
+                    <p class="project-subtitle">Summer Internship &#183; King Abdulaziz University</p>
+                    <p class="project-description">
+                        An administrative dashboard for the Self-Resources Administration to review academic programs and financial planning. My work improved the program review wizard, version tracking, dynamic approval statuses, and the semester financial allocation table for colleges.
+                    </p>
+                    <ul class="project-features">
+                        <li>Program review wizard updates</li>
+                        <li>Version tracking and synchronization</li>
+                        <li>Dynamic approval and rejection statuses</li>
+                        <li>College allocations by semester</li>
+                    </ul>
+                    <p class="project-technologies"><strong>Technologies:</strong> Google Apps Script, Google Sheets, HTML, CSS, JavaScript</p>
+                    <p class="project-credit"><strong>My contributions:</strong> Program Director and College Dean interfaces, approval workflows, table and filtering improvements, and deployment version synchronization.</p>
                 </div>
 
                 <!-- Portfolio Website -->
@@ -859,14 +1018,20 @@
 
     <!-- Contact Section -->
     <section id="contact">
-        <div class="container">
+        <div class="container section-layout contact-layout">
+            <img class="section-gif" src="assets/projects/mailbox.gif" alt="" loading="lazy" decoding="async">
+            <div class="contact-content">
             <div class="section-header">
-                <span class="section-tag">LET'S CONNECT</span>
                 <h2>Get In Touch</h2>
                 <p class="section-description">
                     Feel free to connect with me on LinkedIn for collaborations and opportunities
                 </p>
             </div>
+
+            <address class="contact-details">
+                <div><span>Mobile</span><a href="tel:+966554098343">+966 55 409 8343</a></div>
+                <div><span>Email</span><a href="mailto:Duha.alialghamdi@gmail.com">Duha.alialghamdi@gmail.com</a></div>
+            </address>
             <div class="contact-buttons">
                 <a href="https://www.linkedin.com/in/dhuha-alghamdi" target="_blank" class="social-btn linkedin-btn">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
@@ -880,6 +1045,7 @@
                     </svg>
                     <span>View GitHub Profile</span>
                 </a>
+            </div>
             </div>
         </div>
     </section>
