@@ -417,6 +417,23 @@
             gap: 0 1rem;
         }
 
+        .project-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            list-style: none;
+        }
+
+        .project-tags li {
+            padding: 0.25rem 0.75rem;
+            border: 1px solid var(--border-color);
+            border-radius: 50px;
+            background: rgba(244, 182, 206, 0.1);
+            color: var(--accent-primary);
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.8rem;
+        }
+
         .project-link {
             display: inline-flex;
             align-items: center;
@@ -778,6 +795,27 @@
                 </p>
             </div>
             <div class="projects-grid">
+                <!-- FCIT Faculty Mail Finder -->
+                <div class="project-card">
+                    <img class="project-screenshot" src="assets/projects/fcit-mail-finder.png" alt="FCIT Faculty Mail Finder showing Arabic name search, department and campus section filters, and faculty email results with copy buttons" width="1440" height="900" loading="lazy" decoding="async">
+                    <h3>FCIT Faculty Mail Finder</h3>
+                    <p class="project-subtitle">King Abdulaziz University &#183; Faculty Email Directory</p>
+                    <p class="project-description">
+                        A web app that helps students at King Abdulaziz University’s Faculty of Computing and Information Technology quickly find faculty members’ university email addresses. Students can search by part of a name, filter by department and campus section, and copy an email address with one click.
+                    </p>
+                    <ul class="project-tags" aria-label="Technologies">
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>JavaScript</li>
+                        <li>JSON</li>
+                        <li>Python (Data Processing)</li>
+                    </ul>
+                    <div class="project-links">
+                        <a href="https://fcit-mail-finder.netlify.app/" target="_blank" rel="noopener noreferrer" class="project-link">Live Demo <span aria-hidden="true">&#8599;</span></a>
+                        <a href="https://github.com/DhuhaAlghamdi/fcit-faculty-mail-finder" target="_blank" rel="noopener noreferrer" class="project-link">GitHub <span aria-hidden="true">&#8599;</span></a>
+                    </div>
+                </div>
+
                 <!-- FinanceApp -->
                 <div class="project-card">
                     <div class="project-icon">💰</div>
